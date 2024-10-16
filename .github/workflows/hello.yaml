@@ -16,3 +16,6 @@ jobs:
       # Print Hello World message
       - name: Say Hello World
         run: echo "Hello World!"
+
+      - name: Greetings
+        run: echo "Welcome "
