@@ -25,35 +25,23 @@ jobs:
 
       - name: Check Software Versions
         run: |
-          echo "Node.js Version:"
           node -v
-          
-          echo "npm Version:"
           npm -v
-          
-          echo "Python Version:"
-          python3 --version || python --version
-          
-          echo "Java Version:"
-          java -version
-          
-          echo "Git Version:"
-          git --version
-          
-          echo "Docker Version:"
-          docker --version
-
-          echo "Terraform Version:"
-          terraform --version
-
-          echo "Packer Version:"
-          packer --version
-          
-          echo "AWS CLI Version:"
-          aws --version
-          
-          echo "kubectl Version:"
-          kubectl version --client
-
-          echo "Maven Version"
+          python3 --version
+          pip --version
+          java --version
           mvn --version
+          git --version
+          docker version
+          docker-compose version 
+          ansible --version
+          terraform --version
+          packer --version
+          aws --version
+          kubectl version --client
+          mvn --version
+          trivy --version
+          k9s version
+          dotnet --version
+          tfsec --version
+          sonar-scanner --version
