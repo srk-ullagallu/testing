@@ -1,21 +1,55 @@
 name: Hello World Workflow
 
-# Trigger the workflow on any push to the repository
-on: 
+on:
   push:
+    branches:
+      - main
 
 jobs:
-  hello-world:
+  check-versions:
     runs-on: utility
-    
+
     steps:
-      # Check out the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
-      
-      # Print Hello World message
-      - name: Say Hello World
-        run: echo "Hello World!"
 
-      - name: Greetings
-        run: echo "Welcome "
+      - name: Display Runner Information
+        run: |
+          echo "OS Information:"
+          uname -a
+          echo "Disk Space:"
+          df -h
+          echo "Memory Info:"
+          free -h
+
+      - name: Check Software Versions
+        run: |
+          echo "Node.js Version:"
+          node -v || echo "Node.js not installed"
+          
+          echo "npm Version:"
+          npm -v || echo "npm not installed"
+          
+          echo "Python Version:"
+          python3 --version || python --version || echo "Python not installed"
+          
+          echo "Java Version:"
+          java -version || echo "Java not installed"
+          
+          echo "Git Version:"
+          git --version || echo "Git not installed"
+          
+          echo "Docker Version:"
+          docker --version || echo "Docker not installed"
+          
+          echo "Terraform Version:"
+          terraform --version || echo "Terraform not installed"
+
+          echo "Packer Version:"
+          packer --version || echo "Packer not installed"
+          
+          echo "AWS CLI Version:"
+          aws --version || echo "AWS CLI not installed"
+          
+          echo "kubectl Version:"
+          kubectl version --client || echo "kubectl not installed"
