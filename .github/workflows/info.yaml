@@ -45,4 +45,4 @@ jobs:
           dotnet --version
           tfsec --version
           sonar-scanner --version
-          echo "Check the all the above packages"
+          echo "Check the all the above package"
