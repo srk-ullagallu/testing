@@ -21,6 +21,7 @@ jobs:
           df -h
           echo "Memory Info:"
           free -h
+          echo "Hello"
 
       - name: Check Software Versions
         run: |
