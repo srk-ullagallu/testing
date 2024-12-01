@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Checking Runner info and Software Installations
 
 on:
   push:
@@ -25,31 +25,34 @@ jobs:
       - name: Check Software Versions
         run: |
           echo "Node.js Version:"
-          node -v || echo "Node.js not installed"
+          node -v
           
           echo "npm Version:"
-          npm -v || echo "npm not installed"
+          npm -v
           
           echo "Python Version:"
-          python3 --version || python --version || echo "Python not installed"
+          python3 --version || python --version
           
           echo "Java Version:"
-          java -version || echo "Java not installed"
+          java -version
           
           echo "Git Version:"
-          git --version || echo "Git not installed"
+          git --version
           
           echo "Docker Version:"
-          docker --version || echo "Docker not installed"
-          
+          docker --version
+
           echo "Terraform Version:"
-          terraform --version || echo "Terraform not installed"
+          terraform --version
 
           echo "Packer Version:"
-          packer --version || echo "Packer not installed"
+          packer --version
           
           echo "AWS CLI Version:"
-          aws --version || echo "AWS CLI not installed"
+          aws --version
           
           echo "kubectl Version:"
-          kubectl version --client || echo "kubectl not installed"
+          kubectl version --client
+
+          echo "Maven Version"
+          mvn --version
