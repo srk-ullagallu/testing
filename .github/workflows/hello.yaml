@@ -6,7 +6,7 @@ on:
 
 jobs:
   hello-world:
-    runs-on: self-hosted
+    runs-on: utility
     
     steps:
       # Check out the code from the repository
