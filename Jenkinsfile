@@ -54,6 +54,13 @@ pipeline {
                 '''
             }
         }
+        stage("Print the build number"){
+            steps{
+                sh'''
+                echo "Build Number: $BUILD_NUMBER"
+                '''
+            }
+        }
     }
     post {
         always {
