@@ -1,7 +1,7 @@
 name: Checking Runner info and Software Installations
 
 on:
-  push:
+   workflow_dispatch:
     branches:
       - main
 
