@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Print All Environment Variables') {
+            steps {
+                sh 'printenv'
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

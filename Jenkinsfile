@@ -46,5 +46,18 @@ pipeline {
                 '''
             }
         }
+        stage("env"){
+            steps{
+                sh'''
+                echo "Print all env variables in the Jenkins"
+                printenv
+                '''
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
     }
 }
